@@ -35,5 +35,7 @@
     <orderEntry type="library" name="SBT: org.apache.httpcomponents:httpclient:4.0.1:jar" level="project" />
     <orderEntry type="library" name="SBT: org.apache.httpcomponents:httpcore:4.0.1:jar" level="project" />
     <orderEntry type="library" name="SBT: com.google.apis:google-api-services-bigquery:v2-rev238-1.20.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.google.code.gson:gson:2.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.google.apis:google-api-services-storage:v1-rev18-1.19.0:jar" level="project" />
   </component>
 </module>

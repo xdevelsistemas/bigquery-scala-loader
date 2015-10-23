@@ -7,8 +7,32 @@
 		revision="1.0"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20151021170516"/>
+		date="20151023192806"/>
 	<dependencies>
+		<module organisation="com.google.apis" name="google-api-services-storage">
+			<revision name="v1-rev18-1.19.0" status="release" pubdate="20141031051336" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="14">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="2627" time="849" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-storage/ivy-v1-rev18-1.19.0.xml" searched="true" original-local-location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-storage/ivy-v1-rev18-1.19.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-storage/v1-rev18-1.19.0/google-api-services-storage-v1-rev18-1.19.0.pom"/>
+				<caller organisation="default" name="bigquery_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="v1-rev18-1.19.0" rev-constraint-default="v1-rev18-1.19.0" rev-constraint-dynamic="v1-rev18-1.19.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-api-services-storage" type="jar" ext="jar" status="successful" details="" size="94222" time="1295" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-storage/jars/google-api-services-storage-v1-rev18-1.19.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-storage/v1-rev18-1.19.0/google-api-services-storage-v1-rev18-1.19.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.code.gson" name="gson">
+			<revision name="2.4" status="release" pubdate="20151003214730" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/google/gson" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="13">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3250" time="0" location="/home/pnakibar/.ivy2/cache/com.google.code.gson/gson/ivy-2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/gson/gson/2.4/gson-2.4.pom"/>
+				<caller organisation="default" name="bigquery_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="2.4" rev-constraint-default="2.4" rev-constraint-dynamic="2.4" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="gson" type="jar" ext="jar" status="no" details="" size="212164" time="0" location="/home/pnakibar/.ivy2/cache/com.google.code.gson/gson/jars/gson-2.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/code/gson/gson/2.4/gson-2.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="com.google.apis" name="google-api-services-bigquery">
 			<revision name="v2-rev238-1.20.0" status="release" pubdate="20151012210125" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
@@ -24,12 +48,19 @@
 		<module organisation="com.google.api-client" name="google-api-client">
 			<revision name="1.20.0" status="release" pubdate="20150318214032" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="2">
 				<metadata-artifact status="no" details="" size="15389" time="0" location="/home/pnakibar/.ivy2/cache/com.google.api-client/google-api-client/ivy-1.20.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/api-client/google-api-client/1.20.0/google-api-client-1.20.0.pom"/>
+				<caller organisation="com.google.apis" name="google-api-services-storage" conf="default, compile, runtime, master" rev="1.19.0" rev-constraint-default="1.19.0" rev-constraint-dynamic="1.19.0" callerrev="v1-rev18-1.19.0"/>
 				<caller organisation="default" name="bigquery_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="1.20.0" rev-constraint-default="1.20.0" rev-constraint-dynamic="1.20.0" callerrev="1.0"/>
 				<caller organisation="com.google.apis" name="google-api-services-bigquery" conf="default, compile, runtime, master" rev="1.20.0" rev-constraint-default="1.20.0" rev-constraint-dynamic="1.20.0" callerrev="v2-rev238-1.20.0"/>
 				<artifacts>
 					<artifact name="google-api-client" type="jar" ext="jar" status="no" details="" size="194265" time="0" location="/home/pnakibar/.ivy2/cache/com.google.api-client/google-api-client/jars/google-api-client-1.20.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/api-client/google-api-client/1.20.0/google-api-client-1.20.0.jar"/>
 					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.19.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="1.20.0"/>
+				<caller organisation="com.google.apis" name="google-api-services-storage" conf="default, compile, runtime, master" rev="1.19.0" rev-constraint-default="1.19.0" rev-constraint-dynamic="1.19.0" callerrev="v1-rev18-1.19.0"/>
+				<artifacts>
 				</artifacts>
 			</revision>
 		</module>
