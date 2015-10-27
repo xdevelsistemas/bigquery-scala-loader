@@ -19,6 +19,7 @@ import com.google.gson.stream.JsonReader;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -31,147 +32,145 @@ import java.util.Scanner;
  */
 public class StreamingSample {
 
-    /**
-     * Empty constructor since this is just a collection of static methods.
-     */
-    protected StreamingSample() {
+  /**
+   * Empty constructor since this is just a collection of static methods.
+   */
+  protected StreamingSample() {
+  }
+
+
+  /**
+   * Command line that demonstrates Bigquery streaming.
+   *
+   * @param args Command line args, should be empty
+   * @throws IOException IOexception
+   */
+  // [START main]
+  public static void main(final String[] args) throws IOException {
+    final Scanner scanner = new Scanner(System.in);
+    System.out.println("Enter your project id: ");
+    //String projectId = scanner.nextLine();
+      String projectId = "xplanauth";
+    System.out.println("Enter your dataset id: ");
+    String datasetId = "testing";
+    System.out.println("Enter your table id: ");
+    String tableId = "teste2";
+    scanner.close();
+
+    System.out.println("Enter JSON to stream to BigQuery: \n"
+        + "Press End-of-stream (CTRL-D) to stop");
+
+    //JsonReader fromCli = new JsonReader(new InputStreamReader(System.in));
+    JsonReader fromCli = new JsonReader(new StringReader("[{\"nome\":\"rolls\"}]"));
+
+    Iterator<TableDataInsertAllResponse> responses = run(projectId,
+        datasetId,
+        tableId,
+        fromCli);
+
+    while (responses.hasNext()) {
+      System.out.println(responses.next());
     }
 
-
-    /**
-     * Command line that demonstrates Bigquery streaming.
-     *
-     * @param args Command line args, should be empty
-     * @throws IOException IOexception
-     */
-    // [START main]
-    public static void main(final String[] args) throws IOException {
-        final Scanner scanner = new Scanner(System.in);
-        //System.out.println("Enter your project id: ");
-        //String projectId = scanner.nextLine();
-        String projectId = "xplanauth";
-        //System.out.println("Enter your dataset id: ");
-        //String datasetId = scanner.nextLine();
-        String datasetId = "testing";
-        //System.out.println("Enter your table id: ");
-        //String tableId = scanner.nextLine();
-        String tableId = "test";
-        //scanner.close();
-
-        System.out.println("Enter JSON to stream to BigQuery: \n"
-                + "Press End-of-stream (CTRL-D) to stop");
-
-        JsonReader fromCli = new JsonReader(new InputStreamReader(System.in));
-
-        Iterator<TableDataInsertAllResponse> responses = run(projectId,
-                datasetId,
-                tableId,
-                fromCli);
+    fromCli.close();
+  }
+  // [END main]
 
 
-        while (responses.hasNext()) {
-            System.out.println(responses.next());
+  /**
+   * Run the bigquery ClI.
+   *
+   * @param projectId Project id
+   * @param datasetId datasetid
+   * @param tableId tableid
+   * @param rows The source of the JSON rows we are streaming in.
+   * @return Returns Iterates through the stream responses
+   * @throws IOException Thrown if there is an error connecting to Bigquery.
+   * @throws InterruptedException Should never be thrown
+   */
+  // [START run]
+  public static Iterator<TableDataInsertAllResponse> run(final String projectId,
+      final String datasetId,
+      final String tableId,
+      final JsonReader rows) throws IOException {
+
+
+    final Bigquery bigquery = BigqueryServiceFactory.getService();
+    final Gson gson = new Gson();
+    rows.beginArray();
+
+    return new Iterator<TableDataInsertAllResponse>() {
+
+      /**
+       * Check whether there is another row to stream.
+       *
+       * @return True if there is another row in the stream
+       */
+      public boolean hasNext() {
+        try {
+          return rows.hasNext();
+        } catch (IOException e) {
+          e.printStackTrace();
         }
+        return false;
+      }
 
-        fromCli.close();
-    }
-    // [END main]
+      /**
+       * Insert the next row, and return the response.
+       *
+       * @return Next page of data
+       */
+      public TableDataInsertAllResponse next() {
+        try {
+          Map<String, Object> rowData = gson.<Map<String, Object>>fromJson(
+              rows,
+              (new HashMap<String, Object>()).getClass());
+          return streamRow(bigquery,
+              projectId,
+              datasetId,
+              tableId,
+              new TableDataInsertAllRequest.Rows().setJson(rowData));
+        } catch (JsonSyntaxException e) {
+          e.printStackTrace();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+        return null;
+      }
 
+      public void remove() {
+        this.next();
+      }
 
-    /**
-     * Run the bigquery ClI.
-     *
-     * @param projectId Project id
-     * @param datasetId datasetid
-     * @param tableId tableid
-     * @param rows The source of the JSON rows we are streaming in.
-     * @return Returns Iterates through the stream responses
-     * @throws IOException Thrown if there is an error connecting to Bigquery.
-     * @throws InterruptedException Should never be thrown
-     */
-    // [START run]
-    public static Iterator<TableDataInsertAllResponse> run(final String projectId,
-                                                           final String datasetId,
-                                                           final String tableId,
-                                                           final JsonReader rows) throws IOException {
+    };
 
+  }
+  // [END run]
 
-        final Bigquery bigquery = BigqueryServiceFactory.getService();
-        final Gson gson = new Gson();
-        rows.beginArray();
+  /**
+   * Stream the given row into the given bigquery table.
+   *
+   * @param bigquery The bigquery service
+   * @param projectId project id from Google Developers console
+   * @param datasetId id of the dataset
+   * @param tableId id of the table we're streaming
+   * @param row the row we're inserting
+   * @return Response from the insert
+   * @throws IOException ioexception
+   */
+  // [START streamRow]
+  public static TableDataInsertAllResponse streamRow(final Bigquery bigquery,
+      final String projectId,
+      final String datasetId,
+      final String tableId,
+      final TableDataInsertAllRequest.Rows row) throws IOException {
 
-        return new Iterator<TableDataInsertAllResponse>() {
-
-            /**
-             * Check whether there is another row to stream.
-             *
-             * @return True if there is another row in the stream
-             */
-            public boolean hasNext() {
-                try {
-                    return rows.hasNext();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                return false;
-            }
-
-            /**
-             * Insert the next row, and return the response.
-             *
-             * @return Next page of data
-             */
-            public TableDataInsertAllResponse next() {
-                try {
-                    Map<String, Object> rowData = gson.<Map<String, Object>>fromJson(
-                            rows,
-                            (new HashMap<String, Object>()).getClass());
-                    return streamRow(bigquery,
-                            projectId,
-                            datasetId,
-                            tableId,
-                            new TableDataInsertAllRequest.Rows().setJson(rowData));
-                } catch (JsonSyntaxException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                return null;
-            }
-
-            public void remove() {
-                this.next();
-            }
-
-        };
-
-    }
-    // [END run]
-
-    /**
-     * Stream the given row into the given bigquery table.
-     *
-     * @param bigquery The bigquery service
-     * @param projectId project id from Google Developers console
-     * @param datasetId id of the dataset
-     * @param tableId id of the table we're streaming
-     * @param row the row we're inserting
-     * @return Response from the insert
-     * @throws IOException ioexception
-     */
-    // [START streamRow]
-    public static TableDataInsertAllResponse streamRow(final Bigquery bigquery,
-                                                       final String projectId,
-                                                       final String datasetId,
-                                                       final String tableId,
-                                                       final TableDataInsertAllRequest.Rows row) throws IOException {
-
-        return bigquery.tabledata().insertAll(
-                projectId,
-                datasetId,
-                tableId,
-                new TableDataInsertAllRequest().setRows(
-                        Collections.singletonList(row))).execute();
-    }
-    // [END streamRow]
+    return bigquery.tabledata().insertAll(
+        projectId,
+        datasetId,
+        tableId,
+        new TableDataInsertAllRequest().setRows(
+            Collections.singletonList(row))).execute();
+  }
+  // [END streamRow]
 }
