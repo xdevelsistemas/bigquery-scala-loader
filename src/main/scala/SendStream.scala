@@ -13,10 +13,22 @@ import scala.concurrent.duration.Duration
 /**
  * Created by pnakibar on 21/10/15.
  */
+/*
+JSON Pattern:
+{
+  "key":"value",
+  "key2":"value2"
+}
+ */
 object SendStream{
+
   def applyJsons(projectId: String, datasetId: String, tableId: String, intervalBetweenStreams: Long, jsons: List[String]) = {
     val jsonReaders = jsons.map(json => new JsonReader(new StringReader(json)))
     apply(projectId, datasetId, tableId, intervalBetweenStreams, jsonReaders)
+  }
+
+  def apply(projectId: String, datasetId: String, tableId: String, intervalBetweenStreams: Long, json: Map[String, String]): TableDataInsertAllResponse = {
+    null
   }
 
   def apply(projectId: String, datasetId: String, tableId: String, intervalBetweenStreams: Long, jsonReaders: List[JsonReader]): Future[List[TableDataInsertAllResponse]] = Future {
