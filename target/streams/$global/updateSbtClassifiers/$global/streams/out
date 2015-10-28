@@ -703,9 +703,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
-[debug] :: resolution report :: resolve 948ms :: artifacts dl 67ms
+[debug] :: resolution report :: resolve 1106ms :: artifacts dl 40ms
 [debug] 	report for default#bigquery$sbt_2.11;1.0 default produced in /home/pnakibar/git/protos/bigquery/target/resolution-cache/reports/default-bigquery$sbt_2.11-default.xml
-[debug] 	resolve done (948ms resolve - 67ms download)
+[debug] 	resolve done (1106ms resolve - 40ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#bigquery$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1069,6 +1069,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.8!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.8!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 164ms :: artifacts dl 129ms
+[debug] :: resolution report :: resolve 183ms :: artifacts dl 39ms
 [debug] 	report for default#bigquery$sources_2.11;1.0 default produced in /home/pnakibar/git/protos/bigquery/target/resolution-cache/reports/default-bigquery$sources_2.11-default.xml
-[debug] 	resolve done (164ms resolve - 129ms download)
+[debug] 	resolve done (183ms resolve - 39ms download)

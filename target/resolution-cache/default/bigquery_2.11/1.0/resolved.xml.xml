@@ -4,7 +4,7 @@
 		module="bigquery_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151023192806"
+		publication="20151028151758"
 	>
 		<description>
 		bigquery

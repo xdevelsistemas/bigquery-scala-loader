@@ -4,7 +4,7 @@
 		module="bigquery$sources_javadoc_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151023192814"
+		publication="20151028151802"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

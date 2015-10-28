@@ -4,7 +4,7 @@
 		module="bigquery$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151023192813"
+		publication="20151028151801"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>

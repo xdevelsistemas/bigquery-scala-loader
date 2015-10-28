@@ -42,3 +42,4 @@ public class BigqueryServiceFactory {
     // [END get_service]
 
 }
+
