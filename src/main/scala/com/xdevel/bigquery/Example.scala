@@ -1,12 +1,9 @@
-import java.io.{File, FileInputStream, StringReader}
-import java.util.concurrent.TimeUnit
+package com.xdevel.bigquery
 
-import com.google.api.client.googleapis.auth.oauth2.GoogleCredential
+import java.io.StringReader
+
 import com.google.gson.stream.JsonReader
-
-import scala.concurrent.Await
-import scala.concurrent.duration.Duration
-import scala.concurrent.duration.SECONDS
+import com.xdevel.bigquery.samples.BigqueryServiceFactory
 
 /**
  * Created by pnakibar on 28/10/15.

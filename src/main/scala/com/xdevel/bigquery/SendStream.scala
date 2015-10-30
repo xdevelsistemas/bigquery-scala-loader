@@ -1,14 +1,17 @@
+package com.xdevel.bigquery
+
 import java.io._
 import java.util
+
 import com.google.api.services.bigquery.Bigquery
 import com.google.api.services.bigquery.model.TableDataInsertAllRequest.Rows
 import com.google.api.services.bigquery.model._
 import com.google.gson.Gson
 import com.google.gson.stream.JsonReader
-import scala.concurrent.ExecutionContext.Implicits.global
+import com.xdevel.bigquery.samples.{StreamingSample, BigqueryServiceFactory}
 
-import scala.concurrent.{Await, Future}
-import scala.concurrent.duration.Duration
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 
 
 /**
@@ -25,10 +28,10 @@ JSON Pattern:
 class SendStream(val bigquery: Bigquery){
   type Json = String
 
-  //val bigquery = BigqueryServiceFactory.getService
+  //val bigquery = com.xdevel.bigquery.samples.BigqueryServiceFactory.getService
   val gson = new Gson
 
-  //def getService(stream: InputStream) = BigqueryServiceFactory.getService(stream)
+  //def getService(stream: InputStream) = com.xdevel.bigquery.samples.BigqueryServiceFactory.getService(stream)
   def getService = BigqueryServiceFactory.getService
 
   def convertToJson(map: Map[Any, Any]): Json = {
@@ -62,7 +65,7 @@ class SendStream(val bigquery: Bigquery){
   }
 
   def apply(projectId: String, datasetId: String, tableId: String, jsonReader: JsonReader): TableDataInsertAllResponse = {
-    //val bigquery = BigqueryServiceFactory.getService
+    //val bigquery = com.xdevel.bigquery.samples.BigqueryServiceFactory.getService
     //val gson = new Gson
     val data = gson.fromJson[java.util.HashMap[String, AnyRef]](jsonReader, new util.HashMap[String, AnyRef]().getClass)
 

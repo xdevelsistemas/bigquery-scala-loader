@@ -1,4 +1,4 @@
-//[START all]
+package com.xdevel.bigquery.samples;//[START all]
 /*
  * Copyright (c) 2014 Google Inc.
  *
@@ -172,7 +172,7 @@ public class StorageSample {
      */
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.out.println("Usage: StorageSample <bucket-name>");
+            System.out.println("Usage: com.xdevel.bigquery.samples.StorageSample <bucket-name>");
             System.exit(1);
         }
 

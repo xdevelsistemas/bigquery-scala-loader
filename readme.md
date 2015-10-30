@@ -9,10 +9,10 @@
 ```scala
 	//auth
 	//As a file
-	val bigquery = BigqueryServiceFactory.getService("/filepath/to/your/credential.json")
+	val bigquery = com.xdevel.bigquery.samples.BigqueryServiceFactory.getService("/filepath/to/your/credential.json")
 
 	//Reading the default credential, if you set it with gcloud client utility
-	val bigquery = BigqueryServiceFactory.getService
+	val bigquery = com.xdevel.bigquery.samples.BigqueryServiceFactory.getService
 
 	//example: reading a project dataset
 	val datasetList = bigquery.datasets().list("projectID").execute()
@@ -20,7 +20,7 @@
 
 
 	//inserting data into a bigquery table:
-  	val sendStream = new SendStream(bigquery)
+  	val sendStream = new com.xdevel.bigquery.SendStream(bigquery)
 	val entry2 = "{\"name\":\"john doe\"}"
   	sendStream.apply("projectId", "datasetId", "tableId", new JsonReader(new StringReader(entry2)))
 ```

@@ -1,4 +1,4 @@
-/*
+package com.xdevel.bigquery.samples;/*
  Copyright 2015, Google, Inc.
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@ import com.google.gson.JsonSyntaxException;
 import com.google.gson.stream.JsonReader;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.util.Collections;
 import java.util.HashMap;
