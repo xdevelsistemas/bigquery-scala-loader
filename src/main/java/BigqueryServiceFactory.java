@@ -6,6 +6,8 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.bigquery.Bigquery;
 import com.google.api.services.bigquery.BigqueryScopes;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
@@ -28,6 +30,15 @@ public class BigqueryServiceFactory {
         }
         return service;
     }
+
+    public static Bigquery getService(String filepath) throws IOException {
+        return getService(new File(filepath));
+    }
+
+    public static Bigquery getService(File file) throws IOException{
+        return getService(new FileInputStream(file));
+    }
+
     public static Bigquery getService(InputStream stream) throws IOException{
         if(service==null){
             synchronized(service_lock){
