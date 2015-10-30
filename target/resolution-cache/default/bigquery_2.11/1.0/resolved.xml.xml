@@ -4,7 +4,7 @@
 		module="bigquery_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151028151758"
+		publication="20151028182952"
 	>
 		<description>
 		bigquery
@@ -36,5 +36,6 @@
 		<dependency org="com.google.api-client" name="google-api-client" rev="1.20.0" conf="compile->default(compile)"/>
 		<dependency org="com.google.code.gson" name="gson" rev="2.4" conf="compile->default(compile)"/>
 		<dependency org="com.google.apis" name="google-api-services-storage" rev="v1-rev18-1.19.0" conf="compile->default(compile)"/>
+		<dependency org="com.google.gcloud" name="gcloud-java" rev="0.0.10" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

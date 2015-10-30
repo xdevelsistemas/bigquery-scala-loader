@@ -4,7 +4,7 @@
 		module="bigquery$sources_javadoc_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151028151802"
+		publication="20151028183116"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -74,7 +74,98 @@
 			<artifact name="gson" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="gson" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="com.google.apis" name="google-api-services-storage" rev="v1-rev18-1.19.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+		<dependency org="com.google.gcloud" name="gcloud-java" rev="0.0.10" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="gcloud-java" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="gcloud-java" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.gcloud" name="gcloud-java-core" rev="0.0.10" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="gcloud-java-core" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="gcloud-java-core" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.auth" name="google-auth-library-credentials" rev="0.1.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="google-auth-library-credentials" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="google-auth-library-credentials" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.auth" name="google-auth-library-oauth2-http" rev="0.1.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="google-auth-library-oauth2-http" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="google-auth-library-oauth2-http" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.guava" name="guava" rev="18.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="guava" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="guava" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.api-client" name="google-api-client-appengine" rev="1.20.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="google-api-client-appengine" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="google-api-client-appengine" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.oauth-client" name="google-oauth-client-appengine" rev="1.20.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="google-oauth-client-appengine" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="google-oauth-client-appengine" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.http-client" name="google-http-client-appengine" rev="1.20.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="google-http-client-appengine" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="google-http-client-appengine" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.oauth-client" name="google-oauth-client-servlet" rev="1.20.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="google-oauth-client-servlet" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="google-oauth-client-servlet" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.http-client" name="google-http-client-jdo" rev="1.20.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="google-http-client-jdo" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="google-http-client-jdo" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="javax.jdo" name="jdo2-api" rev="2.3-eb" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="jdo2-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="jdo2-api" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="javax.transaction" name="transaction-api" rev="1.1" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="transaction-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="transaction-api" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="javax.servlet" name="servlet-api" rev="2.5" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="servlet-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.google.api-client" name="google-api-client-servlet" rev="1.20.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="google-api-client-servlet" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="google-api-client-servlet" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.http-client" name="google-http-client-jackson" rev="1.20.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="google-http-client-jackson" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="google-http-client-jackson" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="org.codehaus.jackson" name="jackson-core-asl" rev="1.9.11" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="jackson-core-asl" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="jackson-core-asl" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="joda-time" name="joda-time" rev="2.8.2" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="joda-time" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="joda-time" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="org.json" name="json" rev="20090211" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="json" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="json" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.gcloud" name="gcloud-java-datastore" rev="0.0.10" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="gcloud-java-datastore" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="gcloud-java-datastore" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.apis" name="google-api-services-datastore-protobuf" rev="v1beta2-rev1-2.1.2" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="google-api-services-datastore-protobuf" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="google-api-services-datastore-protobuf" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.protobuf" name="protobuf-java" rev="2.5.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="protobuf-java" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="protobuf-java" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.http-client" name="google-http-client-protobuf" rev="1.15.0-rc" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="google-http-client-protobuf" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="google-http-client-protobuf" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.gcloud" name="gcloud-java-storage" rev="0.0.10" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
+			<artifact name="gcloud-java-storage" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="gcloud-java-storage" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.google.apis" name="google-api-services-storage" rev="v1-rev33-1.20.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="google-api-services-storage" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="google-api-services-storage" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>

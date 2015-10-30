@@ -7,22 +7,370 @@
 		revision="1.0"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20151028151802"/>
+		date="20151028183116"/>
 	<dependencies>
-		<module organisation="com.google.apis" name="google-api-services-storage">
-			<revision name="v1-rev18-1.19.0" status="release" pubdate="20141031051336" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="13">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3037" time="0" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-storage/ivy-v1-rev18-1.19.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-storage/v1-rev18-1.19.0/google-api-services-storage-v1-rev18-1.19.0.pom"/>
-				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="v1-rev18-1.19.0" rev-constraint-default="v1-rev18-1.19.0" rev-constraint-dynamic="v1-rev18-1.19.0" callerrev="1.0"/>
+		<module organisation="com.google.gcloud" name="gcloud-java">
+			<revision name="0.0.10" status="release" pubdate="20151015191347" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="13">
+				<metadata-artifact status="no" details="" size="4461" time="0" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java/ivy-0.0.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java/0.0.10/gcloud-java-0.0.10.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="0.0.10" rev-constraint-default="0.0.10" rev-constraint-dynamic="0.0.10" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="google-api-services-storage" type="jar" ext="jar" status="no" details="" size="94222" time="0" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-storage/jars/google-api-services-storage-v1-rev18-1.19.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-storage/v1-rev18-1.19.0/google-api-services-storage-v1-rev18-1.19.0.jar"/>
+					<artifact name="gcloud-java" type="doc" ext="jar" extra-classifier="javadoc" status="failed" details="" size="0" time="0"/>
+					<artifact name="gcloud-java" type="jar" ext="jar" status="no" details="" size="2046" time="0" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java/jars/gcloud-java-0.0.10.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java/0.0.10/gcloud-java-0.0.10.jar"/>
 					</artifact>
-					<artifact name="google-api-services-storage" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="3796439" time="0" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-storage/docs/google-api-services-storage-v1-rev18-1.19.0-javadoc.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-storage/v1-rev18-1.19.0/google-api-services-storage-v1-rev18-1.19.0-javadoc.jar"/>
+					<artifact name="gcloud-java" type="src" ext="jar" extra-classifier="sources" status="failed" details="" size="0" time="0"/>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.gcloud" name="gcloud-java-storage">
+			<revision name="0.0.10" status="release" pubdate="20151015191347" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="35">
+				<metadata-artifact status="no" details="" size="4665" time="0" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-storage/ivy-0.0.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-storage/0.0.10/gcloud-java-storage-0.0.10.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="0.0.10" rev-constraint-default="0.0.10" rev-constraint-dynamic="0.0.10" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="gcloud-java-storage" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="56966" time="1882" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-storage/srcs/gcloud-java-storage-0.0.10-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-storage/0.0.10/gcloud-java-storage-0.0.10-sources.jar"/>
 					</artifact>
-					<artifact name="google-api-services-storage" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="349250" time="0" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-storage/srcs/google-api-services-storage-v1-rev18-1.19.0-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-storage/v1-rev18-1.19.0/google-api-services-storage-v1-rev18-1.19.0-sources.jar"/>
+					<artifact name="gcloud-java-storage" type="jar" ext="jar" status="no" details="" size="162070" time="0" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-storage/jars/gcloud-java-storage-0.0.10.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-storage/0.0.10/gcloud-java-storage-0.0.10.jar"/>
+					</artifact>
+					<artifact name="gcloud-java-storage" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="418721" time="4685" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-storage/docs/gcloud-java-storage-0.0.10-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-storage/0.0.10/gcloud-java-storage-0.0.10-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.apis" name="google-api-services-storage">
+			<revision name="v1-rev33-1.20.0" status="release" pubdate="20150422213315" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="36">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3037" time="0" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-storage/ivy-v1-rev33-1.20.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-storage/v1-rev33-1.20.0/google-api-services-storage-v1-rev33-1.20.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="v1-rev33-1.20.0" rev-constraint-default="v1-rev33-1.20.0" rev-constraint-dynamic="v1-rev33-1.20.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-api-services-storage" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="3996452" time="39038" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-storage/docs/google-api-services-storage-v1-rev33-1.20.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-storage/v1-rev33-1.20.0/google-api-services-storage-v1-rev33-1.20.0-javadoc.jar"/>
+					</artifact>
+					<artifact name="google-api-services-storage" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="377000" time="4613" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-storage/srcs/google-api-services-storage-v1-rev33-1.20.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-storage/v1-rev33-1.20.0/google-api-services-storage-v1-rev33-1.20.0-sources.jar"/>
+					</artifact>
+					<artifact name="google-api-services-storage" type="jar" ext="jar" status="no" details="" size="97825" time="0" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-storage/jars/google-api-services-storage-v1-rev33-1.20.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-storage/v1-rev33-1.20.0/google-api-services-storage-v1-rev33-1.20.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.gcloud" name="gcloud-java-datastore">
+			<revision name="0.0.10" status="release" pubdate="20151015191348" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="31">
+				<metadata-artifact status="no" details="" size="4563" time="0" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-datastore/ivy-0.0.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-datastore/0.0.10/gcloud-java-datastore-0.0.10.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="0.0.10" rev-constraint-default="0.0.10" rev-constraint-dynamic="0.0.10" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="gcloud-java-datastore" type="jar" ext="jar" status="no" details="" size="197368" time="0" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-datastore/jars/gcloud-java-datastore-0.0.10.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-datastore/0.0.10/gcloud-java-datastore-0.0.10.jar"/>
+					</artifact>
+					<artifact name="gcloud-java-datastore" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="89188" time="1916" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-datastore/srcs/gcloud-java-datastore-0.0.10-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-datastore/0.0.10/gcloud-java-datastore-0.0.10-sources.jar"/>
+					</artifact>
+					<artifact name="gcloud-java-datastore" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="501702" time="4111" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-datastore/docs/gcloud-java-datastore-0.0.10-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-datastore/0.0.10/gcloud-java-datastore-0.0.10-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.apis" name="google-api-services-datastore-protobuf">
+			<revision name="v1beta2-rev1-2.1.2" status="release" pubdate="20140911231552" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/GoogleCloudPlatform/google-cloud-datastore" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="32">
+				<metadata-artifact status="no" details="" size="4389" time="0" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-datastore-protobuf/ivy-v1beta2-rev1-2.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-datastore-protobuf/v1beta2-rev1-2.1.2/google-api-services-datastore-protobuf-v1beta2-rev1-2.1.2.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="v1beta2-rev1-2.1.2" rev-constraint-default="v1beta2-rev1-2.1.2" rev-constraint-dynamic="v1beta2-rev1-2.1.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-api-services-datastore-protobuf" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="952481" time="6442" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-datastore-protobuf/docs/google-api-services-datastore-protobuf-v1beta2-rev1-2.1.2-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-datastore-protobuf/v1beta2-rev1-2.1.2/google-api-services-datastore-protobuf-v1beta2-rev1-2.1.2-javadoc.jar"/>
+					</artifact>
+					<artifact name="google-api-services-datastore-protobuf" type="jar" ext="jar" status="no" details="" size="456594" time="0" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-datastore-protobuf/jars/google-api-services-datastore-protobuf-v1beta2-rev1-2.1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-datastore-protobuf/v1beta2-rev1-2.1.2/google-api-services-datastore-protobuf-v1beta2-rev1-2.1.2.jar"/>
+					</artifact>
+					<artifact name="google-api-services-datastore-protobuf" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="134591" time="2039" location="/home/pnakibar/.ivy2/cache/com.google.apis/google-api-services-datastore-protobuf/srcs/google-api-services-datastore-protobuf-v1beta2-rev1-2.1.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/apis/google-api-services-datastore-protobuf/v1beta2-rev1-2.1.2/google-api-services-datastore-protobuf-v1beta2-rev1-2.1.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.http-client" name="google-http-client-protobuf">
+			<revision name="1.15.0-rc" status="release" pubdate="20130508143252" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="34">
+				<metadata-artifact status="no" details="" size="10012" time="0" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-protobuf/ivy-1.15.0-rc.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-protobuf/1.15.0-rc/google-http-client-protobuf-1.15.0-rc.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="1.15.0-rc" rev-constraint-default="1.15.0-rc" rev-constraint-dynamic="1.15.0-rc" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-http-client-protobuf" type="jar" ext="jar" status="no" details="" size="7093" time="0" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-protobuf/jars/google-http-client-protobuf-1.15.0-rc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-protobuf/1.15.0-rc/google-http-client-protobuf-1.15.0-rc.jar"/>
+					</artifact>
+					<artifact name="google-http-client-protobuf" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="58087" time="2815" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-protobuf/docs/google-http-client-protobuf-1.15.0-rc-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-protobuf/1.15.0-rc/google-http-client-protobuf-1.15.0-rc-javadoc.jar"/>
+					</artifact>
+					<artifact name="google-http-client-protobuf" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="6357" time="1246" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-protobuf/srcs/google-http-client-protobuf-1.15.0-rc-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-protobuf/1.15.0-rc/google-http-client-protobuf-1.15.0-rc-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.protobuf" name="protobuf-java">
+			<revision name="2.5.0" status="release" pubdate="20130307211811" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/protobuf" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="33">
+				<license name="New BSD license" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="3013" time="0" location="/home/pnakibar/.ivy2/cache/com.google.protobuf/protobuf-java/ivy-2.5.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="2.5.0" rev-constraint-default="2.5.0" rev-constraint-dynamic="2.5.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="protobuf-java" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1212478" time="8868" location="/home/pnakibar/.ivy2/cache/com.google.protobuf/protobuf-java/docs/protobuf-java-2.5.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0-javadoc.jar"/>
+					</artifact>
+					<artifact name="protobuf-java" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="276990" time="0" location="/home/pnakibar/.ivy2/cache/com.google.protobuf/protobuf-java/srcs/protobuf-java-2.5.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0-sources.jar"/>
+					</artifact>
+					<artifact name="protobuf-java" type="jar" ext="jar" status="successful" details="" size="533455" time="4398" location="/home/pnakibar/.ivy2/cache/com.google.protobuf/protobuf-java/jars/protobuf-java-2.5.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.gcloud" name="gcloud-java-core">
+			<revision name="0.0.10" status="release" pubdate="20151015191347" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="14">
+				<metadata-artifact status="no" details="" size="5840" time="0" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-core/ivy-0.0.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-core/0.0.10/gcloud-java-core-0.0.10.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="0.0.10" rev-constraint-default="0.0.10" rev-constraint-dynamic="0.0.10" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="gcloud-java-core" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="142932" time="2766" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-core/docs/gcloud-java-core-0.0.10-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-core/0.0.10/gcloud-java-core-0.0.10-javadoc.jar"/>
+					</artifact>
+					<artifact name="gcloud-java-core" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="17695" time="1267" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-core/srcs/gcloud-java-core-0.0.10-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-core/0.0.10/gcloud-java-core-0.0.10-sources.jar"/>
+					</artifact>
+					<artifact name="gcloud-java-core" type="jar" ext="jar" status="no" details="" size="39401" time="0" location="/home/pnakibar/.ivy2/cache/com.google.gcloud/gcloud-java-core/jars/gcloud-java-core-0.0.10.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/gcloud/gcloud-java-core/0.0.10/gcloud-java-core-0.0.10.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.json" name="json">
+			<revision name="20090211" status="release" pubdate="20090226153142" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.json.org/java/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="30">
+				<license name="provided without support or warranty" url="http://www.json.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2908" time="0" location="/home/pnakibar/.ivy2/cache/org.json/json/ivy-20090211.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/json/json/20090211/json-20090211.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="20090211" rev-constraint-default="20090211" rev-constraint-dynamic="20090211" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="json" type="jar" ext="jar" status="no" details="" size="45944" time="0" location="/home/pnakibar/.ivy2/cache/org.json/json/jars/json-20090211.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json/json/20090211/json-20090211.jar"/>
+					</artifact>
+					<artifact name="json" type="src" ext="jar" extra-classifier="sources" status="failed" details="" size="0" time="0"/>
+					<artifact name="json" type="doc" ext="jar" extra-classifier="javadoc" status="failed" details="" size="0" time="0"/>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="joda-time" name="joda-time">
+			<revision name="2.8.2" status="release" pubdate="20150811085923" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-time/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="29">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6469" time="0" location="/home/pnakibar/.ivy2/cache/joda-time/joda-time/ivy-2.8.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/joda-time/joda-time/2.8.2/joda-time-2.8.2.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="2.8.2" rev-constraint-default="2.8.2" rev-constraint-dynamic="2.8.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="joda-time" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1319362" time="8172" location="/home/pnakibar/.ivy2/cache/joda-time/joda-time/docs/joda-time-2.8.2-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/joda-time/joda-time/2.8.2/joda-time-2.8.2-javadoc.jar"/>
+					</artifact>
+					<artifact name="joda-time" type="jar" ext="jar" status="no" details="" size="621992" time="0" location="/home/pnakibar/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.8.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/joda-time/joda-time/2.8.2/joda-time-2.8.2.jar"/>
+					</artifact>
+					<artifact name="joda-time" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="762254" time="5048" location="/home/pnakibar/.ivy2/cache/joda-time/joda-time/srcs/joda-time-2.8.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/joda-time/joda-time/2.8.2/joda-time-2.8.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.api-client" name="google-api-client-appengine">
+			<revision name="1.20.0" status="release" pubdate="20150318214101" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="18">
+				<metadata-artifact status="no" details="" size="16018" time="0" location="/home/pnakibar/.ivy2/cache/com.google.api-client/google-api-client-appengine/ivy-1.20.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/api-client/google-api-client-appengine/1.20.0/google-api-client-appengine-1.20.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="1.20.0" rev-constraint-default="1.20.0" rev-constraint-dynamic="1.20.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-api-client-appengine" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="9843" time="1121" location="/home/pnakibar/.ivy2/cache/com.google.api-client/google-api-client-appengine/srcs/google-api-client-appengine-1.20.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/api-client/google-api-client-appengine/1.20.0/google-api-client-appengine-1.20.0-sources.jar"/>
+					</artifact>
+					<artifact name="google-api-client-appengine" type="jar" ext="jar" status="no" details="" size="9872" time="0" location="/home/pnakibar/.ivy2/cache/com.google.api-client/google-api-client-appengine/jars/google-api-client-appengine-1.20.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/api-client/google-api-client-appengine/1.20.0/google-api-client-appengine-1.20.0.jar"/>
+					</artifact>
+					<artifact name="google-api-client-appengine" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="79990" time="1691" location="/home/pnakibar/.ivy2/cache/com.google.api-client/google-api-client-appengine/docs/google-api-client-appengine-1.20.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/api-client/google-api-client-appengine/1.20.0/google-api-client-appengine-1.20.0-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.api-client" name="google-api-client-servlet">
+			<revision name="1.20.0" status="release" pubdate="20150318214040" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="26">
+				<metadata-artifact status="no" details="" size="15068" time="0" location="/home/pnakibar/.ivy2/cache/com.google.api-client/google-api-client-servlet/ivy-1.20.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/api-client/google-api-client-servlet/1.20.0/google-api-client-servlet-1.20.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="1.20.0" rev-constraint-default="1.20.0" rev-constraint-dynamic="1.20.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-api-client-servlet" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="53036" time="1406" location="/home/pnakibar/.ivy2/cache/com.google.api-client/google-api-client-servlet/docs/google-api-client-servlet-1.20.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/api-client/google-api-client-servlet/1.20.0/google-api-client-servlet-1.20.0-javadoc.jar"/>
+					</artifact>
+					<artifact name="google-api-client-servlet" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="7612" time="1114" location="/home/pnakibar/.ivy2/cache/com.google.api-client/google-api-client-servlet/srcs/google-api-client-servlet-1.20.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/api-client/google-api-client-servlet/1.20.0/google-api-client-servlet-1.20.0-sources.jar"/>
+					</artifact>
+					<artifact name="google-api-client-servlet" type="jar" ext="jar" status="no" details="" size="6723" time="0" location="/home/pnakibar/.ivy2/cache/com.google.api-client/google-api-client-servlet/jars/google-api-client-servlet-1.20.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/api-client/google-api-client-servlet/1.20.0/google-api-client-servlet-1.20.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.oauth-client" name="google-oauth-client-appengine">
+			<revision name="1.20.0" status="release" pubdate="20150318212807" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="19">
+				<metadata-artifact status="no" details="" size="12644" time="0" location="/home/pnakibar/.ivy2/cache/com.google.oauth-client/google-oauth-client-appengine/ivy-1.20.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/oauth-client/google-oauth-client-appengine/1.20.0/google-oauth-client-appengine-1.20.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="1.20.0" rev-constraint-default="1.20.0" rev-constraint-dynamic="1.20.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-oauth-client-appengine" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="73435" time="3029" location="/home/pnakibar/.ivy2/cache/com.google.oauth-client/google-oauth-client-appengine/docs/google-oauth-client-appengine-1.20.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/oauth-client/google-oauth-client-appengine/1.20.0/google-oauth-client-appengine-1.20.0-javadoc.jar"/>
+					</artifact>
+					<artifact name="google-oauth-client-appengine" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="11736" time="1319" location="/home/pnakibar/.ivy2/cache/com.google.oauth-client/google-oauth-client-appengine/srcs/google-oauth-client-appengine-1.20.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/oauth-client/google-oauth-client-appengine/1.20.0/google-oauth-client-appengine-1.20.0-sources.jar"/>
+					</artifact>
+					<artifact name="google-oauth-client-appengine" type="jar" ext="jar" status="no" details="" size="7948" time="0" location="/home/pnakibar/.ivy2/cache/com.google.oauth-client/google-oauth-client-appengine/jars/google-oauth-client-appengine-1.20.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/oauth-client/google-oauth-client-appengine/1.20.0/google-oauth-client-appengine-1.20.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.oauth-client" name="google-oauth-client-servlet">
+			<revision name="1.20.0" status="release" pubdate="20150318212754" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="21">
+				<metadata-artifact status="no" details="" size="12623" time="0" location="/home/pnakibar/.ivy2/cache/com.google.oauth-client/google-oauth-client-servlet/ivy-1.20.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/oauth-client/google-oauth-client-servlet/1.20.0/google-oauth-client-servlet-1.20.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="1.20.0" rev-constraint-default="1.20.0" rev-constraint-dynamic="1.20.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-oauth-client-servlet" type="jar" ext="jar" status="no" details="" size="22117" time="0" location="/home/pnakibar/.ivy2/cache/com.google.oauth-client/google-oauth-client-servlet/jars/google-oauth-client-servlet-1.20.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/oauth-client/google-oauth-client-servlet/1.20.0/google-oauth-client-servlet-1.20.0.jar"/>
+					</artifact>
+					<artifact name="google-oauth-client-servlet" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="107059" time="2101" location="/home/pnakibar/.ivy2/cache/com.google.oauth-client/google-oauth-client-servlet/docs/google-oauth-client-servlet-1.20.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/oauth-client/google-oauth-client-servlet/1.20.0/google-oauth-client-servlet-1.20.0-javadoc.jar"/>
+					</artifact>
+					<artifact name="google-oauth-client-servlet" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="21299" time="1125" location="/home/pnakibar/.ivy2/cache/com.google.oauth-client/google-oauth-client-servlet/srcs/google-oauth-client-servlet-1.20.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/oauth-client/google-oauth-client-servlet/1.20.0/google-oauth-client-servlet-1.20.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.servlet" name="servlet-api">
+			<revision name="2.5" status="release" pubdate="20060717080957" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="25">
+				<metadata-artifact status="no" details="" size="2194" time="0" location="/home/pnakibar/.ivy2/cache/javax.servlet/servlet-api/ivy-2.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/servlet/servlet-api/2.5/servlet-api-2.5.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="2.5" rev-constraint-default="2.5" rev-constraint-dynamic="2.5" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="servlet-api" type="jar" ext="jar" status="no" details="" size="105112" time="0" location="/home/pnakibar/.ivy2/cache/javax.servlet/servlet-api/jars/servlet-api-2.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar"/>
+					</artifact>
+					<artifact name="servlet-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="158114" time="0" location="/home/pnakibar/.ivy2/cache/javax.servlet/servlet-api/srcs/servlet-api-2.5-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.http-client" name="google-http-client-jdo">
+			<revision name="1.20.0" status="release" pubdate="20150318205303" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="22">
+				<metadata-artifact status="no" details="" size="13102" time="0" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-jdo/ivy-1.20.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jdo/1.20.0/google-http-client-jdo-1.20.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="1.20.0" rev-constraint-default="1.20.0" rev-constraint-dynamic="1.20.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-http-client-jdo" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="38014" time="1401" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-jdo/docs/google-http-client-jdo-1.20.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jdo/1.20.0/google-http-client-jdo-1.20.0-javadoc.jar"/>
+					</artifact>
+					<artifact name="google-http-client-jdo" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="4450" time="1117" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-jdo/srcs/google-http-client-jdo-1.20.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jdo/1.20.0/google-http-client-jdo-1.20.0-sources.jar"/>
+					</artifact>
+					<artifact name="google-http-client-jdo" type="jar" ext="jar" status="no" details="" size="11336" time="0" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-jdo/jars/google-http-client-jdo-1.20.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jdo/1.20.0/google-http-client-jdo-1.20.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.jdo" name="jdo2-api">
+			<revision name="2.3-eb" status="release" pubdate="20100121221408" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://db.apache.org/jdo/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="23">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3179" time="0" location="/home/pnakibar/.ivy2/cache/javax.jdo/jdo2-api/ivy-2.3-eb.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/jdo/jdo2-api/2.3-eb/jdo2-api-2.3-eb.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="2.3-eb" rev-constraint-default="2.3-eb" rev-constraint-dynamic="2.3-eb" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jdo2-api" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="902856" time="8238" location="/home/pnakibar/.ivy2/cache/javax.jdo/jdo2-api/docs/jdo2-api-2.3-eb-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/jdo/jdo2-api/2.3-eb/jdo2-api-2.3-eb-javadoc.jar"/>
+					</artifact>
+					<artifact name="jdo2-api" type="jar" ext="jar" status="no" details="" size="192696" time="0" location="/home/pnakibar/.ivy2/cache/javax.jdo/jdo2-api/jars/jdo2-api-2.3-eb.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/jdo/jdo2-api/2.3-eb/jdo2-api-2.3-eb.jar"/>
+					</artifact>
+					<artifact name="jdo2-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="283945" time="2868" location="/home/pnakibar/.ivy2/cache/javax.jdo/jdo2-api/srcs/jdo2-api-2.3-eb-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/jdo/jdo2-api/2.3-eb/jdo2-api-2.3-eb-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.transaction" name="transaction-api">
+			<revision name="1.1" status="release" pubdate="20100121201324" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="24">
+				<metadata-artifact status="no" details="" size="2206" time="0" location="/home/pnakibar/.ivy2/cache/javax.transaction/transaction-api/ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/transaction/transaction-api/1.1/transaction-api-1.1.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="transaction-api" type="doc" ext="jar" extra-classifier="javadoc" status="failed" details="" size="0" time="0"/>
+					<artifact name="transaction-api" type="jar" ext="jar" status="no" details="" size="15071" time="0" location="/home/pnakibar/.ivy2/cache/javax.transaction/transaction-api/jars/transaction-api-1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/transaction/transaction-api/1.1/transaction-api-1.1.jar"/>
+					</artifact>
+					<artifact name="transaction-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="25014" time="1143" location="/home/pnakibar/.ivy2/cache/javax.transaction/transaction-api/srcs/transaction-api-1.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/transaction/transaction-api/1.1/transaction-api-1.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.http-client" name="google-http-client-appengine">
+			<revision name="1.20.0" status="release" pubdate="20150318205158" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="20">
+				<metadata-artifact status="no" details="" size="12878" time="0" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-appengine/ivy-1.20.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-appengine/1.20.0/google-http-client-appengine-1.20.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="1.20.0" rev-constraint-default="1.20.0" rev-constraint-dynamic="1.20.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-http-client-appengine" type="jar" ext="jar" status="no" details="" size="15695" time="0" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-appengine/jars/google-http-client-appengine-1.20.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-appengine/1.20.0/google-http-client-appengine-1.20.0.jar"/>
+					</artifact>
+					<artifact name="google-http-client-appengine" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="10780" time="1165" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-appengine/srcs/google-http-client-appengine-1.20.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-appengine/1.20.0/google-http-client-appengine-1.20.0-sources.jar"/>
+					</artifact>
+					<artifact name="google-http-client-appengine" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="65587" time="1777" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-appengine/docs/google-http-client-appengine-1.20.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-appengine/1.20.0/google-http-client-appengine-1.20.0-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.guava" name="guava">
+			<revision name="18.0" status="release" pubdate="20151020134225" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="17">
+				<metadata-artifact status="no" details="" size="5765" time="0" location="/home/pnakibar/.ivy2/cache/com.google.guava/guava/ivy-18.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/google/guava/guava/18.0/guava-18.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="18.0" rev-constraint-default="18.0" rev-constraint-dynamic="18.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="guava" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="5185956" time="0" location="/home/pnakibar/.ivy2/cache/com.google.guava/guava/docs/guava-18.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/guava/guava/18.0/guava-18.0-javadoc.jar"/>
+					</artifact>
+					<artifact name="guava" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1277909" time="0" location="/home/pnakibar/.ivy2/cache/com.google.guava/guava/srcs/guava-18.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/guava/guava/18.0/guava-18.0-sources.jar"/>
+					</artifact>
+					<artifact name="guava" type="jar" ext="jar" status="no" details="" size="2256213" time="0" location="/home/pnakibar/.ivy2/cache/com.google.guava/guava/jars/guava-18.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/guava/guava/18.0/guava-18.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.auth" name="google-auth-library-oauth2-http">
+			<revision name="0.1.0" status="release" pubdate="20150302160737" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="16">
+				<metadata-artifact status="no" details="" size="5910" time="0" location="/home/pnakibar/.ivy2/cache/com.google.auth/google-auth-library-oauth2-http/ivy-0.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/auth/google-auth-library-oauth2-http/0.1.0/google-auth-library-oauth2-http-0.1.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="0.1.0" rev-constraint-default="0.1.0" rev-constraint-dynamic="0.1.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-auth-library-oauth2-http" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="78304" time="1737" location="/home/pnakibar/.ivy2/cache/com.google.auth/google-auth-library-oauth2-http/docs/google-auth-library-oauth2-http-0.1.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/auth/google-auth-library-oauth2-http/0.1.0/google-auth-library-oauth2-http-0.1.0-javadoc.jar"/>
+					</artifact>
+					<artifact name="google-auth-library-oauth2-http" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="14713" time="1191" location="/home/pnakibar/.ivy2/cache/com.google.auth/google-auth-library-oauth2-http/srcs/google-auth-library-oauth2-http-0.1.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/auth/google-auth-library-oauth2-http/0.1.0/google-auth-library-oauth2-http-0.1.0-sources.jar"/>
+					</artifact>
+					<artifact name="google-auth-library-oauth2-http" type="jar" ext="jar" status="no" details="" size="21791" time="0" location="/home/pnakibar/.ivy2/cache/com.google.auth/google-auth-library-oauth2-http/jars/google-auth-library-oauth2-http-0.1.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/auth/google-auth-library-oauth2-http/0.1.0/google-auth-library-oauth2-http-0.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.auth" name="google-auth-library-credentials">
+			<revision name="0.1.0" status="release" pubdate="20150302160742" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="15">
+				<metadata-artifact status="no" details="" size="4689" time="0" location="/home/pnakibar/.ivy2/cache/com.google.auth/google-auth-library-credentials/ivy-0.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/auth/google-auth-library-credentials/0.1.0/google-auth-library-credentials-0.1.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="0.1.0" rev-constraint-default="0.1.0" rev-constraint-dynamic="0.1.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-auth-library-credentials" type="jar" ext="jar" status="no" details="" size="2669" time="0" location="/home/pnakibar/.ivy2/cache/com.google.auth/google-auth-library-credentials/jars/google-auth-library-credentials-0.1.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/auth/google-auth-library-credentials/0.1.0/google-auth-library-credentials-0.1.0.jar"/>
+					</artifact>
+					<artifact name="google-auth-library-credentials" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1645" time="1227" location="/home/pnakibar/.ivy2/cache/com.google.auth/google-auth-library-credentials/srcs/google-auth-library-credentials-0.1.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/auth/google-auth-library-credentials/0.1.0/google-auth-library-credentials-0.1.0-sources.jar"/>
+					</artifact>
+					<artifact name="google-auth-library-credentials" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="37614" time="1529" location="/home/pnakibar/.ivy2/cache/com.google.auth/google-auth-library-credentials/docs/google-auth-library-credentials-0.1.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/auth/google-auth-library-credentials/0.1.0/google-auth-library-credentials-0.1.0-javadoc.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -127,6 +475,39 @@
 					</artifact>
 					<artifact name="google-oauth-client" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="66923" time="0" location="/home/pnakibar/.ivy2/cache/com.google.oauth-client/google-oauth-client/srcs/google-oauth-client-1.20.0-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/oauth-client/google-oauth-client/1.20.0/google-oauth-client-1.20.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.http-client" name="google-http-client-jackson">
+			<revision name="1.20.0" status="release" pubdate="20150318205238" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="27">
+				<metadata-artifact status="no" details="" size="12595" time="0" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-jackson/ivy-1.20.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson/1.20.0/google-http-client-jackson-1.20.0.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="1.20.0" rev-constraint-default="1.20.0" rev-constraint-dynamic="1.20.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="google-http-client-jackson" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="5344" time="1258" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-jackson/srcs/google-http-client-jackson-1.20.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson/1.20.0/google-http-client-jackson-1.20.0-sources.jar"/>
+					</artifact>
+					<artifact name="google-http-client-jackson" type="jar" ext="jar" status="no" details="" size="6033" time="0" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-jackson/jars/google-http-client-jackson-1.20.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson/1.20.0/google-http-client-jackson-1.20.0.jar"/>
+					</artifact>
+					<artifact name="google-http-client-jackson" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="38469" time="1644" location="/home/pnakibar/.ivy2/cache/com.google.http-client/google-http-client-jackson/docs/google-http-client-jackson-1.20.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson/1.20.0/google-http-client-jackson-1.20.0-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.jackson" name="jackson-core-asl">
+			<revision name="1.9.11" status="release" pubdate="20121106142713" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="28">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2438" time="0" location="/home/pnakibar/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/ivy-1.9.11.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11.pom"/>
+				<caller organisation="default" name="bigquery$sources_javadoc_2.11" conf="compile, runtime" rev="1.9.11" rev-constraint-default="1.9.11" rev-constraint-dynamic="1.9.11" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jackson-core-asl" type="doc" ext="jar" extra-classifier="javadoc" status="failed" details="" size="0" time="0"/>
+					<artifact name="jackson-core-asl" type="jar" ext="jar" status="no" details="" size="232131" time="0" location="/home/pnakibar/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.9.11.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11.jar"/>
+					</artifact>
+					<artifact name="jackson-core-asl" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="240282" time="2756" location="/home/pnakibar/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/srcs/jackson-core-asl-1.9.11-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

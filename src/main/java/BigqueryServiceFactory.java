@@ -7,6 +7,7 @@ import com.google.api.services.bigquery.Bigquery;
 import com.google.api.services.bigquery.BigqueryScopes;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Collection;
 
 /**
@@ -27,6 +28,18 @@ public class BigqueryServiceFactory {
         }
         return service;
     }
+    public static Bigquery getService(InputStream stream) throws IOException{
+        if(service==null){
+            synchronized(service_lock){
+                if(service==null){
+                    service=createAuthorizedClient(stream);
+                }
+            }
+        }
+        return service;
+    }
+
+
 
     // [START get_service]
     private static Bigquery createAuthorizedClient() throws IOException {
@@ -40,6 +53,18 @@ public class BigqueryServiceFactory {
         return new Bigquery.Builder(TRANSPORT, JSON_FACTORY, credential).setApplicationName("BigQuery Samples").build();
     }
     // [END get_service]
+
+    private static Bigquery createAuthorizedClient(InputStream stream) throws IOException {
+        Collection<String> BIGQUERY_SCOPES = BigqueryScopes.all();
+        HttpTransport TRANSPORT = new NetHttpTransport();
+        JsonFactory JSON_FACTORY = new JacksonFactory();
+        GoogleCredential credential = GoogleCredential.fromStream(stream, TRANSPORT, JSON_FACTORY);
+        if(credential.createScopedRequired()){
+            credential = credential.createScoped(BIGQUERY_SCOPES);
+        }
+        return new Bigquery.Builder(TRANSPORT, JSON_FACTORY, credential).setApplicationName("BigQuery Samples").build();
+    }
+
 
 }
 

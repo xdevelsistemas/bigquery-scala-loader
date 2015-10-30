@@ -21,14 +21,16 @@ object Example extends App{
   //val entry1:Map[Any, Any] = Map("name" -> "john doe")
   //SendStream.apply("xplanauth", "testing", "teste2", entry1)
 
-  val key = new File("/home/pnakibar/Downloads/Gerencio-b44ebb669bf0(1).p12")
-  val bigquery = BigqueryServiceFactory.getService(new FileInputStream(key))
+  //val key = new File("/home/pnakibar/Downloads/client_secret_102279528686-o789ucro647lufjmc1obp029rnh1soih.apps.googleusercontent.com(2).json")
+  val bigquery = BigqueryServiceFactory.getService(new FileInputStream(new File("/home/pnakibar/Downloads/Gerencio-60f354546ff8.json")))
+  val a = bigquery.datasets().list("xplanauth").execute()
+  println(a)
 
   //SendStream.apply("projectId", "datasetId", "tableId", entry2)
 
-  val entry2 = "{\"name\":\"john doe\"}"
-  val sendStream = new SendStream(bigquery)
-  sendStream.apply("projectId", "datasetId", "tableId", new JsonReader(new StringReader(entry2)))
+  //val entry2 = "{\"name\":\"john doe\"}"
+  //val sendStream = new SendStream(bigquery)
+  //sendStream.apply("projectId", "datasetId", "tableId", new JsonReader(new StringReader(entry2)))
 
   /*
   val entry3:List[Map[Any, Any]] = List(entry1, Map("name"->"douglas noel adams"), Map("name" -> "master yoda"))
