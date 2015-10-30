@@ -1,10 +1,3 @@
-# TODO
-- [x] Criar tabela no big query
-- [x] Enviar arquivo para o cloud storage
-- [x] Modularizar para streams/minuto 
-- [x] Adicionar possibilidade de autenticar pela biblioteca
-- [] Documentar
-
 # Como gerar credencial de conta
 1. Abra o **Google Developer's console**
 2. Em *APIs & Auth* selecione *Credentials*
