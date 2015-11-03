@@ -1,5 +1,2 @@
-classes/
-.idea/
-.idea
-/.idea/
-/.idea
+classes/*
+.idea/*
